@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: -2px 2px #0ff, 2px -2px #f00;
+  }
+  25% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px -2px #0ff, -2px 2px #f00;
+  }
+  50% {
+    transform: translate(2px, -2px);
+    text-shadow: -2px 2px #0ff, 2px -2px #f00;
+  }
+  75% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px -2px #0ff, -2px 2px #f00;
+  }
+  100% {
+    transform: translate(0);
+    text-shadow: -2px 2px #0ff, 2px -2px #f00;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 255, 255, 0.1) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+.retro-text {
+  animation: glitch 3s infinite;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.crt-overlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+.loading-bar {
+  position: relative;
+  height: 30px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 2px solid #0ff;
+  overflow: hidden;
+}
+
+.loading-progress {
+  height: 100%;
+  background: #0ff;
+  transition: width 2s linear;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #0ff;
+  backdrop-filter: blur(10px);
+}
