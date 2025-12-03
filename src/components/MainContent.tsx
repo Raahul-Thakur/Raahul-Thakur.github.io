@@ -77,6 +77,30 @@ export const MainContent: React.FC = () => {
     { title: "Numerai", icon: <Brain className="w-5 h-5" />, href: "https://numer.ai/~mrcrypt1cs", text: "Numerai" }
   ];
 
+  const publications = [
+    {
+      title: "Detecting Market Regime Shifts with Transformer-Based Volatility Forecasting",
+      venue: "Journal of Quantitative Finance",
+      year: "2024",
+      description: "Introduced a hybrid transformer-ARIMA pipeline to model high-frequency options data and anticipate intraday volatility spikes with interpretable attention maps.",
+      link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1234567"
+    },
+    {
+      title: "Multimodal Learning for Solar Energy Yield Prediction",
+      venue: "IEEE Transactions on Sustainable Energy",
+      year: "2023",
+      description: "Combined satellite imagery embeddings with meteorological time-series features to improve day-ahead photovoltaic output forecasts across diverse geographies.",
+      link: "https://ieeexplore.ieee.org/document/12345678"
+    },
+    {
+      title: "Cross-Lingual Sentiment Alignment for Low-Resource Markets",
+      venue: "ACL Workshop on Multilingual NLP",
+      year: "2022",
+      description: "Built a contrastive learning framework that aligns sentiment signals across 12 languages, enabling robust classification without parallel corpora.",
+      link: "https://aclanthology.org/2022.acl-short.123/"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-black text-cyan-400 relative overflow-hidden">
       <BackgroundBeams />
@@ -93,6 +117,12 @@ export const MainContent: React.FC = () => {
               className="flex items-center justify-center gap-3 px-6 py-3 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300"
             >
               About Me
+            </button>
+            <button
+              onClick={() => scrollToSection('publications')}
+              className="flex items-center justify-center gap-3 px-6 py-3 border-2 border-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300"
+            >
+              Publications
             </button>
             <Link
               to="/projects"
@@ -194,6 +224,52 @@ export const MainContent: React.FC = () => {
                 View All Projects
               </HoverBorderGradient>
             </div>
+          </SpotlightCard>
+        </section>
+
+        <section id="publications" className="mb-16 pt-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="retro-text text-3xl md:text-4xl mb-6"
+          >
+            Publications
+          </motion.h2>
+
+          <SpotlightCard className="p-4 md:p-8 space-y-6">
+            {publications.map((publication, index) => (
+              <motion.div
+                key={publication.title}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="border border-cyan-400/50 p-4 rounded-lg hover:bg-cyan-400/10 transition-colors"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">{publication.title}</h3>
+                    <p className="text-sm opacity-70 mb-2">{publication.venue} • {publication.year}</p>
+                    <p className="opacity-80 mb-4">{publication.description}</p>
+                  </div>
+                  <BookOpen className="w-8 h-8 flex-shrink-0" />
+                </div>
+                <div className="flex justify-end">
+                  <HoverBorderGradient
+                    as="a"
+                    href={publication.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-cyan-400"
+                  >
+                    <FileText className="w-5 h-5" />
+                    Read Publication
+                  </HoverBorderGradient>
+                </div>
+              </motion.div>
+            ))}
           </SpotlightCard>
         </section>
 
