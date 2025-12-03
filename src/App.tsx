@@ -4,7 +4,8 @@ import { StartScreen } from './components/StartScreen';
 import { LoadingScreen } from './components/LoadingScreen';
 import { MainContent } from './components/MainContent';
 import { Projects } from './components/Projects';
-import { LinguanaAI } from './components/LinguanaAI';
+import { Research } from './components/Research';
+import { Contact } from './components/Contact';
 
 function App() {
   const [stage, setStage] = useState<'start' | 'loading' | 'main'>('start');
@@ -30,7 +31,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/linguana-ai" element={<LinguanaAI />} />
+        <Route path="/research" element={<Research />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
