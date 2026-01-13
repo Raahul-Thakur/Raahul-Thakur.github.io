@@ -50,7 +50,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({ onStart }) => {
         transition={{ duration: 0.5, delay: 1 }}
         className="mt-8 text-sm relative z-10"
       >
-        © 2024
+        © 2026
       </motion.div>
     </div>
   );
