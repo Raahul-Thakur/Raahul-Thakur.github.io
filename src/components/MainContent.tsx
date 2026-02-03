@@ -208,7 +208,7 @@ export const MainContent: React.FC = () => {
             viewport={{ once: true }}
             className="retro-text text-3xl md:text-4xl mb-6"
           >
-            Blog & Notes
+            My Other Stuffs
           </motion.h2>
 
           <SpotlightCard className="p-4 md:p-8 mb-8">
