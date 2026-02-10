@@ -28,9 +28,9 @@ const publishedWork = [
       "Novel approach to designing robust small-satellite constellations using orbital resonance mapping for collision avoidance and mission optimization.",
     authors: "Rahul Thakur",
     links: {
-      abstract: "https://www.academia.edu/",
-      paper: "#",
-      code: "https://github.com/Raahul-Thakur",
+      abstract: "https://drive.google.com/file/d/10dTT5LMm4s2ZH_tbWiXUrvF0xo8ulb5H/view",
+      presentation: "https://docs.google.com/presentation/d/1Oaf7aL765ODIeiHrzb8o19xTEBxCBOz2Nrz5aUrdIx8/edit?usp=sharing",
+      code: "https://github.com/Raahul-Thakur/WSW",
     }
   },
 ];
