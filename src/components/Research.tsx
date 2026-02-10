@@ -29,7 +29,7 @@ const publishedWork = [
     authors: "Rahul Thakur",
     links: {
       abstract: "https://drive.google.com/file/d/10dTT5LMm4s2ZH_tbWiXUrvF0xo8ulb5H/view",
-      presentation: "https://docs.google.com/presentation/d/1Oaf7aL765ODIeiHrzb8o19xTEBxCBOz2Nrz5aUrdIx8/edit?usp=sharing",
+      paper: "https://docs.google.com/presentation/d/1Oaf7aL765ODIeiHrzb8o19xTEBxCBOz2Nrz5aUrdIx8/edit?usp=sharing",
       code: "https://github.com/Raahul-Thakur/WSW",
     }
   },
