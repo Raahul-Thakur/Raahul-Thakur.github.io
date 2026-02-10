@@ -22,8 +22,8 @@ const publishedWork = [
   },
   {
     title: "Resonant Harmony: Leveraging Orbital Resonance Maps to Architect Safer, Smarter Small-Satellite Constellations",
-    venue: "In Review",
-    year: "2025",
+    venue: "Winter Satellite Workshop - Espoo, Finland",
+    year: "2026",
     description:
       "Novel approach to designing robust small-satellite constellations using orbital resonance mapping for collision avoidance and mission optimization.",
     authors: "Rahul Thakur",
