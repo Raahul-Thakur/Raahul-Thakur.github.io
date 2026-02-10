@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
 
@@ -9,6 +9,7 @@ export const HoverBorderGradient = ({
   as: Tag = "button",
   duration = 1,
   onClick,
+  ...props
 }: {
   children: React.ReactNode;
   containerClassName?: string;
@@ -16,6 +17,7 @@ export const HoverBorderGradient = ({
   as?: React.ElementType;
   duration?: number;
   onClick?: () => void;
+  [key: string]: unknown;
 }) => {
   const [hovered, setHovered] = useState(false);
 
@@ -28,6 +30,7 @@ export const HoverBorderGradient = ({
         containerClassName
       )}
       onClick={onClick}
+      {...props}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-white to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <motion.div
