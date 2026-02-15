@@ -229,6 +229,15 @@ export const MainContent: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8"
             >
+              <p className="text-base md:text-lg opacity-90 leading-relaxed mb-4 md:mb-6">
+                Hi, I'm Rahul – part data scientist, part astrophysics enthusiast, and a full-time curious mind. My life's mission is to decode the universe, whether it's clustering stars in the night sky or clustering customer behaviors on Earth. I thrive at the intersection of data, science, and creativity – the perfect mix for a self-proclaimed "nerd with flair."
+              </p>
+              <p className="text-base md:text-lg opacity-90 leading-relaxed mb-4 md:mb-6">
+                Professionally, I've had the privilege of tackling projects ranging from AI in esports to used car price predictions to decoding solar energy production patterns. I like to think of myself as a problem-solver – whether it's optimizing a machine learning pipeline or figuring out how to fit gym, gaming, and sleep into a 24-hour day.
+              </p>
+              <p className="text-base md:text-lg opacity-90 leading-relaxed mb-6">
+                I love a challenge, especially when it involves technology, innovation, and a dash of creativity. If you're here, chances are we have something in common – a drive to build, explore, and create something meaningful. So, let's connect, brainstorm, or just nerd out together. Who knows? Maybe we'll solve the next big mystery of the cosmos.
+              </p>
               <section>
                 <h3 className="text-2xl font-semibold mb-3">Education</h3>
                 <ul className="space-y-4 text-base md:text-lg opacity-90 leading-relaxed list-disc pl-6">
