@@ -227,16 +227,84 @@ export const MainContent: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-8"
             >
-              <p className="text-base md:text-lg opacity-90 leading-relaxed mb-4 md:mb-6">
-                Hi, I'm Rahul – part data scientist, part astrophysics enthusiast, and a full-time curious mind. My life's mission is to decode the universe, whether it's clustering stars in the night sky or clustering customer behaviors on Earth. I thrive at the intersection of data, science, and creativity – the perfect mix for a self-proclaimed "nerd with flair."
-              </p>
-              <p className="text-base md:text-lg opacity-90 leading-relaxed mb-4 md:mb-6">
-                Professionally, I've had the privilege of tackling projects ranging from AI in esports to used car price predictions to decoding solar energy production patterns. I like to think of myself as a problem-solver – whether it's optimizing a machine learning pipeline or figuring out how to fit gym, gaming, and sleep into a 24-hour day.
-              </p>
-              <p className="text-base md:text-lg opacity-90 leading-relaxed mb-6">
-                I love a challenge, especially when it involves technology, innovation, and a dash of creativity. If you're here, chances are we have something in common – a drive to build, explore, and create something meaningful. So, let's connect, brainstorm, or just nerd out together. Who knows? Maybe we'll solve the next big mystery of the cosmos.
-              </p>
+              <section>
+                <h3 className="text-2xl font-semibold mb-3">Education</h3>
+                <ul className="space-y-4 text-base md:text-lg opacity-90 leading-relaxed list-disc pl-6">
+                  <li>
+                    <span className="font-semibold">2019 - 2022:</span> BSC Physics, Mumbai University
+                  </li>
+                  <li>
+                    <span className="font-semibold">2024 - 2025:</span> Masters Diploma in AI and Data Science, Boston Institute of Analytics
+                    <p className="mt-2 opacity-90">
+                      <span className="font-semibold">Capstone:</span> Credit Card Usage Segmentation. Built an autonomous web agent with LLMs, reducing manual data extraction time by 60% and delivering scalable insights in seconds vs. 2-3 hours manually.
+                    </p>
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-2xl font-semibold mb-3">Work Experience</h3>
+                <div className="space-y-5 text-base md:text-lg opacity-90 leading-relaxed">
+                  <div>
+                    <p className="font-semibold">Probox - Data Analyst (Sep 2025 - Current)</p>
+                    <ul className="list-disc pl-6 mt-2 space-y-2">
+                      <li>Working as a data analyst aiding the operational team to provide insights, identify bottlenecks, and support smooth project execution.</li>
+                      <li>Building an AI-first healthcare platform by designing the system architecture and training/fine-tuning LLM models for summarization and personalization.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold">Fellowship.AI - Machine Learning Fellow (Jan 2025 - Apr 2025)</p>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold">Spinnaker Analytics - Data Science Researcher (Sep 2024 - Apr 2025)</p>
+                    <ul className="list-disc pl-6 mt-2 space-y-2">
+                      <li>Deployed ML models across energy, automotive, retail, and meteorology domains, contributing to a 15-20% increase in forecasting accuracy.</li>
+                      <li>Improved resource allocation, increased sales conversion by 10%, and reduced manual decision-making by 25%.</li>
+                      <li>Reduced training time by 30% through optimized pipelines.</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-2xl font-semibold mb-3">Skills</h3>
+                <div className="space-y-3 text-base md:text-lg opacity-90 leading-relaxed">
+                  <p><span className="font-semibold">Machine Learning:</span> Supervised, Unsupervised, Time Series, CNNs, RNNs, GANs, RAG</p>
+                  <p><span className="font-semibold">Programming & Data:</span> Python, Pandas, NumPy, PostgreSQL, Power BI, Tableau</p>
+                  <p><span className="font-semibold">MLOps & Cloud:</span> Docker, MLFlow, DVC, GCP Vertex AI, BigQuery, Streamlit, Render</p>
+                  <p><span className="font-semibold">NLP:</span> Transformers, LangChain, sentence-transformers, spaCy, KeyBERT</p>
+                  <p><span className="font-semibold">Platforms:</span> Supabase, Hugging Face, Vercel, OpenAI</p>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-2xl font-semibold mb-3">Languages I Am Familiar With</h3>
+                <div className="space-y-4 text-base md:text-lg opacity-90 leading-relaxed">
+                  {[
+                    { name: 'Python', value: 80 },
+                    { name: 'SQL', value: 50 },
+                    { name: 'C++', value: 50 },
+                    { name: 'JavaScript', value: 40 }
+                  ].map((language) => (
+                    <div key={language.name}>
+                      <div className="flex justify-between mb-1">
+                        <span>{language.name}</span>
+                        <span>{language.value}/100</span>
+                      </div>
+                      <div className="w-full h-3 border border-cyan-400/70 bg-black/40">
+                        <div
+                          className="h-full bg-cyan-400"
+                          style={{ width: `${language.value}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
             </motion.div>
           </SpotlightCard>
         </section>
