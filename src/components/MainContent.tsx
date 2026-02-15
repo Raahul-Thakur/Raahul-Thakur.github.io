@@ -238,18 +238,6 @@ export const MainContent: React.FC = () => {
                 I love a challenge, especially when it involves technology, innovation, and a dash of creativity. If you're here, chances are we have something in common – a drive to build, explore, and create something meaningful. So, let's connect, brainstorm, or just nerd out together. Who knows? Maybe we'll solve the next big mystery of the cosmos.
               </p>
             </motion.div>
-            <div className="flex justify-center">
-              <HoverBorderGradient
-                as="a"
-                href="https://drive.google.com/drive/folders/1rZ7mSLRbnkauo2SVn4qMp8DtgHsUuuW_?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-cyan-400"
-              >
-                <FileDown className="w-5 h-5" />
-                Download Resume
-              </HoverBorderGradient>
-            </div>
           </SpotlightCard>
         </section>
 
