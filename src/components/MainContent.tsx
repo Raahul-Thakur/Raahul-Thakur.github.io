@@ -266,6 +266,10 @@ export const MainContent: React.FC = () => {
 
                   <div>
                     <p className="font-semibold">Fellowship.AI - Machine Learning Fellow (Jan 2025 - Apr 2025)</p>
+                    <ul className="list-disc pl-6 mt-2 space-y-2">
+                      <li>Built an autonomous web agent with LLMs, reducing manual data extraction time by 60%.</li>
+                      <li>Delivered scalable insights in seconds vs 2-3 hours manually.</li>
+                    </ul>
                   </div>
 
                   <div>
